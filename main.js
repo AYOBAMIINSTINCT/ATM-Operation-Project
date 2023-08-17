@@ -1,33 +1,33 @@
-// My Account Details
+// My Account Details section
 let accountDetails = {
-  accountName: "Ayodeji Abolaji",
-  pin: 1234,
-  accountBalance: 10000,
+  accountName: "Garuba Ayobami",
+  pin: 7777,
+  accountBalance: 500710,
 };
 
 // Alert Message
-alert(`Welcome to FRED ATM Service,
-    Kindly click 'OK' to continue.`);
+alert(`GOood day and Welcome to AYB ATM Service,
+    press 'OK' to continue with this service.`);
 
-// My account name and pin prompt
+// My account name and pin prompt section
 let accountName = prompt("Enter your name:");
 let accountPin = +prompt("Enter your PIN:");
 
-// To Verify the name and PIN entered
+// To Verify the name and PIN entered section
 if (
   accountName !== accountDetails.accountName ||
   accountPin !== accountDetails.pin
 ) {
   alert("Invalid Name or PIN.");
 } else {
-  // Prompt for operation
+  // Prompt for operation section
   let accountOperation = prompt(
     `Choose an operation:
         1. Savings
         2. Current`
   );
 
-  // Account Operations
+  // Account Operations section
   if (accountOperation === "1" || accountOperation === "2") {
     let subOperation = prompt(`Select an Operation:
         1. Withdrawal
@@ -36,9 +36,9 @@ if (
         4. Quick Teller
         5. Quit`);
 
-    // Sub-Operations
+    // Sub-Operations section
     if (subOperation === "1") {
-      // Withdrawal operation
+      // Withdrawal operation setion
       let withdrawalAmount = +prompt("Enter your withdrawal amount:");
       if (
         withdrawalAmount > 0 &&
@@ -52,10 +52,10 @@ if (
         alert("Invalid withdrawal amount or insufficient balance.");
       }
     } else if (subOperation === "2") {
-      // Account Balance operation
+      // Account Balance operation section
       alert(`Your current balance: $${accountDetails.accountBalance}`);
     } else if (subOperation === "3") {
-      // Bank Transfer
+      // Bank Transfer section
       let transferAmount = +prompt("Enter the transfer amount:");
       if (
         transferAmount > 0 &&
@@ -63,14 +63,14 @@ if (
       ) {
         let recipientAccount = prompt("Enter recipient's account number:");
 
-        //Recipient Details object
+        //Recipient Details object section
         let recipientDetails = {
-          accountName: "Alfred",
-          accountNumber: "123456789",
+          accountName: "Instinct",
+          accountNumber: "1122334455",
         };
 
         if (recipientAccount === recipientDetails.accountNumber) {
-          // My transfer
+          // My transfer section
           accountDetails.accountBalance -= transferAmount;
           alert(
             `Transfer successful! Updated balance: $${accountDetails.accountBalance}`
@@ -82,13 +82,13 @@ if (
         alert("Invalid transfer amount or insufficient balance.");
       }
     } else if (subOperation === "4") {
-      // Quick Teller operation
+      // Quick Teller operation section
       let quickTellerOption = prompt(`Select a Quick Teller option:
           1. Buy Recharge Card
           2. Pay for Cable Bills`);
 
       if (quickTellerOption === "1") {
-        // Recharge Mobile Credit
+        // Recharge Mobile Credit section
         let mobileNumber = prompt("Enter the mobile number:");
         let rechargeAmount = +prompt("Enter the recharge amount:");
 
@@ -96,7 +96,7 @@ if (
           rechargeAmount > 0 &&
           rechargeAmount <= accountDetails.accountBalance
         ) {
-          // recharge card
+          // recharge card section
           accountDetails.accountBalance -= rechargeAmount;
           alert(
             `Recharge successful! Remaining balance: $${accountDetails.accountBalance}`
@@ -105,7 +105,7 @@ if (
           alert("Invalid recharge amount or insufficient balance.");
         }
       } else if (quickTellerOption === "2") {
-        // Pay for Cable Services
+        // Pay for Cable Services section
         let cableProvider = prompt("Enter the cable provider:");
         let subscriptionAmount = +prompt("Enter the subscription amount:");
 
@@ -113,7 +113,7 @@ if (
           subscriptionAmount > 0 &&
           subscriptionAmount <= accountDetails.accountBalance
         ) {
-          // subscription
+          // subscription section
           accountDetails.accountBalance -= subscriptionAmount;
           alert(
             `Payment for ${cableProvider} successful! Remaining balance: $${accountDetails.accountBalance}`
@@ -125,8 +125,8 @@ if (
         alert("Invalid Quick Teller option.");
       }
     } else if (subOperation === "5") {
-      // Quit
-      alert("Thank you for using FRED ATM Service. Have a great day!");
+      // Quit section
+      alert("Thank you for using AYB ATM Service. We hope to see you soon!");
     } else {
       alert("Invalid sub-operation.");
     }
